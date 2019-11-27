@@ -1,6 +1,8 @@
 package com.example.ejemplo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -40,6 +42,15 @@ public class Resultados extends AppCompatActivity {
             txtgame.setText("EMPATEEEEE!!!!");
             txtpuntaje.setText(""+j2);
         }
+    }
+    public void Resultados(View v){
+        Intent i =new Intent(Resultados.this,Valores.class);
+        startActivity(i);
+    }
+    public void Volver(View v){
+        Intent i =new Intent(Resultados.this,MainActivity.class);
+        startActivity(i);
+
     }
 
 }

@@ -36,7 +36,7 @@ public class Iniciar2 extends AppCompatActivity {
                 float EjeX=sensorEvent.values[0];
 
                 if(EjeX>5){
-
+                    Registrar(valor1,EjeX);
                     Intent i =new Intent(Iniciar2.this,Resultados.class);
                     i.putExtra("Valor1", valor1);
                     i.putExtra("Valor2",EjeX);

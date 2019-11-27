@@ -14,7 +14,7 @@ public class SQliteOpenHelperClase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase BasedeDatos) {
-        BasedeDatos.execSQL("create table valores( valor1 float primary key, valor2 float)");
+        BasedeDatos.execSQL("create table valores( id int primary key AUTOINCREMENT, valor1 float , valor2 float)");
 
     }
 
