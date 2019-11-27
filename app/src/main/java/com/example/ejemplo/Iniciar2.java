@@ -2,6 +2,7 @@ package com.example.ejemplo;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -9,6 +10,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -74,10 +76,10 @@ public class Iniciar2 extends AppCompatActivity {
 
     }
     public void Registrar(float Valor1, float Valor2){
-        SQliteOpenHelperClase DB=new SQliteOpenHelperClase(this,"DBValores",null,1);
-        SQLiteDatabase sql =DB.getWritableDatabase();
 
-        ContentValues registro=new ContentValues();
+        SQliteOpenHelperClase DB = new SQliteOpenHelperClase(this, "DBValores", null, 1);
+        SQLiteDatabase sql = DB.getWritableDatabase();
+        ContentValues registro = new ContentValues();
         registro.put("Valor1", Valor1);
         registro.put("Valor2", Valor2);
         sql.insert("valores", null, registro);

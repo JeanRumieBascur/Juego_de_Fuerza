@@ -8,13 +8,13 @@ import androidx.annotation.Nullable;
 public class SQliteOpenHelperClase extends SQLiteOpenHelper {
 
 
-    public SQliteOpenHelperClase(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public SQliteOpenHelperClase(Context context, String name,  SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase BasedeDatos) {
-        BasedeDatos.execSQL("create table valores( id int primary key AUTOINCREMENT, valor1 float , valor2 float)");
+        BasedeDatos.execSQL("create table valores( id int primary key , valor1 float , valor2 float)");
 
     }
 
@@ -22,4 +22,5 @@ public class SQliteOpenHelperClase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
 }
